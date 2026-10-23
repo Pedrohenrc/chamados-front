@@ -1,16 +1,41 @@
-# React + Vite
+# Sistema de Chamados de Manutenção - IFRN
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Front-end do sistema de chamados de manutenção do campus, feito em React + Vite para a disciplina de Programação para Internet (Técnico Integrado em Informática, IFRN Campus Pau dos Ferros).
 
-Currently, two official plugins are available:
+O sistema consome uma API pronta para abrir chamados, acompanhar o atendimento e registrar a solução. Cada chamado passa por três etapas: **aberto → em andamento → resolvido**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tela 
 
-## React Compiler
+![Tela inicial](./prints/listarTelas.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tela de abrir chamado
 
-## Expanding the ESLint configuration
+![Tela de abrir chamado](./prints/abrirChamado.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tela de detalhes
+
+![Tela de detalhes de um chamado](./prints/DetalharChamado.png)
+
+## Como rodar
+
+1. Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/pedrohenrc/chamados-front.git
+cd chamados-front
+npm install
+```
+
+2. Crie o arquivo `.env` na raiz do projeto com a sua chave da API:
+
+```
+VITE_API_KEY=sua-chave-aqui
+```
+
+3. Rode o projeto:
+
+```bash
+npm run dev
+```
+
+Se alterar o `.env`, pare e rode o `npm run dev` de novo.
